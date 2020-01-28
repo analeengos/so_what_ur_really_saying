@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "So what you're really saying is...",
+	"permissions":["storage","contextMenus"],
+	"version": "1.0",
+	"description": "YOUR ATTEMPTS AT OBFUSCATION HAVE FAILED SIR",
+	"background":{
+		"scripts":["js/menu.js"]
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["js/content_script.js","js/jquery.js","js/jquery-ui.js"],
+			"run_at": "document_end",
+			"css":["css/style.css","css/jquery.css"]
+		}
+	]
+}
+
